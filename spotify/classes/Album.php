@@ -15,6 +15,10 @@ class Album {
 		$this->tracks = [];
 	}
 
+	public function getId() {
+		return $this->id;
+	}
+
 	public function getArtist() {
 		return $this->artist;
 	}
