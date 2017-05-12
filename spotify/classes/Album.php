@@ -9,7 +9,7 @@ class Album {
 	protected $tracks;
 	protected $recordLabel;
 
-	public function __construct(Artist $artist, string $name, int $releaseYear, Tracks $tracks) {
+	public function __construct(Artist $artist, string $name, int $releaseYear, TrackList $tracks) {
 		$this->artist = $artist;
 		$this->name = $name;
 		$this->releaseYear = $releaseYear; // @todo: if releaseYear == NULL, use todays date
@@ -48,8 +48,8 @@ class Album {
 		$this->tracks->addTrack($track);
 	}
 
-	public function getTracks() {
-		return $this->tracks;
+	public function getTrackList() {
+		return $this->tracks->getTrackList();
 	}
 
 	public function removeTrack(Track $trackToRemove) {

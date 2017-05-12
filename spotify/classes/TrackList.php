@@ -1,6 +1,6 @@
 <?php
 
-class Tracks {
+class TrackList {
 	protected $tracks;
 
 	public function __construct() {
@@ -11,7 +11,7 @@ class Tracks {
 		$this->tracks[] = $track;
 	}
 
-	public function getTracks() {
+	public function getTrackList() {
 		return $this->tracks;
 	}
 

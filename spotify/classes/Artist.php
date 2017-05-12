@@ -5,9 +5,23 @@ class Artist {
 	protected $age;
 	protected $genre;
 	protected $photo;
+	protected $albums;
 
 	public function __construct(string $name) {
 		$this->name = $name;
+		$this->albums = new AlbumList();
+	}
+
+	public function getAlbumList() {
+		return $this->albums->getAlbums();
+	}
+
+	public function addAlbum(Album $album) {
+		$this->albums->addAlbum($album);
+	}
+
+	public function removeAlbum(Album $albumToRemove) {
+		$this->albums->removeAlbum($albumToRemove);
 	}
 
 	public function getName() {
