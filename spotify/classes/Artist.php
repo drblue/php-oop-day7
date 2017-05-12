@@ -1,27 +1,27 @@
 <?php
 
 class Artist {
+	protected $id;
 	protected $name;
 	protected $age;
 	protected $genre;
 	protected $photo;
 	protected $albums;
 
-	public function __construct(string $name) {
-		$this->name = $name;
-		$this->albums = new AlbumList();
+	public function __construct() {
+		$this->albums = [];
+	}
+
+	public function getId() {
+		return $this->id;
 	}
 
 	public function getAlbumList() {
-		return $this->albums->getAlbums();
+		return $this->albums;
 	}
 
 	public function addAlbum(Album $album) {
-		$this->albums->addAlbum($album);
-	}
-
-	public function removeAlbum(Album $albumToRemove) {
-		$this->albums->removeAlbum($albumToRemove);
+		$this->albums[] = $album;
 	}
 
 	public function getName() {

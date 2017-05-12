@@ -1,6 +1,8 @@
 <?php
 
 class Album {
+	protected $id;
+	protected $artist_id;
 	protected $artist;
 	protected $name;
 	protected $releaseYear;
@@ -9,11 +11,8 @@ class Album {
 	protected $tracks;
 	protected $recordLabel;
 
-	public function __construct(Artist $artist, string $name, int $releaseYear, TrackList $tracks) {
-		$this->artist = $artist;
-		$this->name = $name;
-		$this->releaseYear = $releaseYear; // @todo: if releaseYear == NULL, use todays date
-		$this->tracks = $tracks;
+	public function __construct() {
+		$this->tracks = [];
 	}
 
 	public function getArtist() {
@@ -45,15 +44,11 @@ class Album {
 	}
 
 	public function addTrack(Track $track) {
-		$this->tracks->addTrack($track);
+		$this->tracks[] = $track;
 	}
 
 	public function getTrackList() {
-		return $this->tracks->getTrackList();
-	}
-
-	public function removeTrack(Track $trackToRemove) {
-		return $this->tracks->removeTrack($trackToRemove);
+		return $this->tracks;
 	}
 
 	public function getRecordLabel() {

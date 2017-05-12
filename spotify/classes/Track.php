@@ -1,14 +1,14 @@
 <?php
 
 class Track {
+	protected $id;
+	protected $artist_id;
+	protected $album_id;
 	protected $artist;
 	protected $name;
 	protected $url;
 
-	public function __construct(Artist $artist, string $name, string $url = null) {
-		$this->artist = $artist;
-		$this->name = $name;
-		$this->url = $url;
+	public function __construct() {
 	}
 
 	public function getArtist() {
