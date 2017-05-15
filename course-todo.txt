@@ -1,0 +1,10 @@
+Composer
+- Autoloader
+- Namespaces
+ORM / Active Record
+MVC
+Debugging/felsökning
+Felhantering/Exceptions
+
+static
+final

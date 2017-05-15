@@ -1,0 +1,13 @@
+{
+    "name": "dr_blue/orm",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "Johan Nordstrom",
+            "email": "johan@digitalvillage.se"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^5.4"
+    }
+}

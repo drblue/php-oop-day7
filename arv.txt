@@ -1,0 +1,3 @@
+Extends = Arv = Är = Is
+Implements = Implementerar = Kan = Can
+Composition = Komposition = Har = Has
