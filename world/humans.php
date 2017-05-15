@@ -8,7 +8,7 @@ function direct($obj, $class) {
 	}
 }
 
-function ancestor($obj, $class) {
+function ancestor_or_direct($obj, $class) {
 	if (is_a($obj, $class)) {
 		return "Yes";
 	} else {
@@ -16,22 +16,37 @@ function ancestor($obj, $class) {
 	}
 }
 
+function ancestor($obj, $class) {
+	if (is_subclass_of($obj, $class)) {
+		return "Yes";
+	} else {
+		return "No";
+	}
+}
+
 class Human {
-	public $legcount = 2;
-	public $eyecount = 2;
-	public $name;
+	protected $legcount = 2;
+	// protected $eyecount = 2;
+	// protected $name;
 }
 
 class Male extends Human {
-	public $brains = 2;
+	protected $legcount = 3;
 }
 
 class Female extends Human {
-	public $givesBirth = true;
+	protected $givesBirth = true;
 }
 
-$pelle = new Male();
-$pelle->name = "Pelle";
+class Pelle extends Male {
+}
+
+$pelle = new Pelle();
+
+var_dump($pelle);
+die();
+
+
 echo "Is Pelle a direct Male? " . direct($pelle, Male::class);
 echo "\n";
 echo "Is Pelle a direct Female? " . direct($pelle, Female::class);
@@ -40,11 +55,19 @@ echo "Is Pelle a direct Human? " . direct($pelle, Human::class);
 echo "\n";
 echo "\n";
 
-echo "Is Pelle a Male or descendant of Male? " . ancestor($pelle, Male::class);
+echo "Is Pelle a Male or descendant of Male? " . ancestor_or_direct($pelle, Male::class);
 echo "\n";
-echo "Is Pelle a Female or descendant of Female? " . ancestor($pelle, Female::class);
+echo "Is Pelle a Female or descendant of Female? " . ancestor_or_direct($pelle, Female::class);
 echo "\n";
-echo "Is Pelle a Human or descendant of Human? " . ancestor($pelle, Human::class);
+echo "Is Pelle a Human or descendant of Human? " . ancestor_or_direct($pelle, Human::class);
+echo "\n";
+echo "\n";
+
+echo "Is Pelle a descendant of Male? " . ancestor($pelle, Male::class);
+echo "\n";
+echo "Is Pelle a descendant of Female? " . ancestor($pelle, Female::class);
+echo "\n";
+echo "Is Pelle a descendant of Human? " . ancestor($pelle, Human::class);
 echo "\n";
 echo "\n";
 echo "\n";
@@ -60,11 +83,11 @@ echo "Is Eva a direct Human? " . direct($eva, Human::class);
 echo "\n";
 echo "\n";
 
-echo "Is Eva a Male or descendant of Male? " . ancestor($eva, Male::class);
+echo "Is Eva a Male or descendant of Male? " . ancestor_or_direct($eva, Male::class);
 echo "\n";
-echo "Is Eva a Female or descendant of Female? " . ancestor($eva, Female::class);
+echo "Is Eva a Female or descendant of Female? " . ancestor_or_direct($eva, Female::class);
 echo "\n";
-echo "Is Eva a Human or descendant of Human? " . ancestor($eva, Human::class);
+echo "Is Eva a Human or descendant of Human? " . ancestor_or_direct($eva, Human::class);
 echo "\n";
 echo "\n";
 
