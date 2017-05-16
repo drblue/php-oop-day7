@@ -1,0 +1,21 @@
+MVC
+
+Model
+- Databas-koppling till motsvarande tabell
+
+View
+- Renderar det besökaren ser
+
+Controller
+- Bearbetar det besökaren ger oss, hämtar data från Model och ger färdig data till View.
+
+
+   (det besökaren gör)
+	       |
+	     Router
+	       |
+       Controller
+       /        \
+    Model       View
+      |           |
+   Databas   (det besökaren ser)

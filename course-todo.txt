@@ -1,7 +1,10 @@
 Composer
 - Autoloader
 - Namespaces
+
 ORM / Active Record
+- Relationship
+
 MVC
 Debugging/felsökning
 Felhantering/Exceptions
