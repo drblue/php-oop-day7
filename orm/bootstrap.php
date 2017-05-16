@@ -2,8 +2,6 @@
 
 require "vendor/autoload.php";
 require "config.php";
-require "Models/Album.php";
-require "Models/Artist.php";
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 

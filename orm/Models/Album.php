@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 use Illuminate\Database\Eloquent\Model as Model;
 
 class Album extends Model {
@@ -15,5 +17,9 @@ class Album extends Model {
 
 	public function artist() {
 		return $this->belongsTo(Artist::class);
+	}
+
+	public function tracks() {
+		return $this->hasMany(Track::class);
 	}
 }
