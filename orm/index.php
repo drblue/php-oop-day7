@@ -4,20 +4,17 @@ require "bootstrap.php";
 
 $app_name = "Spotify";
 
+$route_prefix = "/day6/orm";
 $routes = [
-	'' => 'Controllers/WelcomeController.php',
-	'artists' => 'Controllers/ArtistController.php',
-	'albums' => 'Controllers/AlbumController.php',
-	'movies' => 'Controllers/MovieController.php',
+	'/' => 'Controllers/WelcomeController.php',
+	'/artists/' => 'Controllers/ArtistController.php',
+	'/albums/' => 'Controllers/AlbumController.php',
+	'/movies/' => 'Controllers/MovieController.php',
 ];
 
 // $page = (isset($_REQUEST['page'])) ? $_REQUEST['page'] : "";
 
-if (isset($_REQUEST['page'])) {
-	$page = $_REQUEST['page'];
-} else {
-	$page = "";
-}
+$page = str_replace($route_prefix, "", $_SERVER['REDIRECT_URL']);
 
 if (array_key_exists($page, $routes)) {
 	// ladda sida
