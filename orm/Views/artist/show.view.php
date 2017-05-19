@@ -4,6 +4,16 @@
 
 <p>Skapad: <?php echo $artist->created_at; ?></p>
 
-<p><a href="index.php?page=artists">Back</a></p>
+<?php foreach ($artist->albums as $album) { ?>
+	<h2><?php echo $album->name; ?></h2>
+
+	<ol>
+		<?php foreach ($album->tracks as $track) { ?>
+			<li><?php echo $track->name; ?></li>
+		<?php } ?>
+	</ol>
+<?php } ?>
+
+<p><a href="/day6/orm/artists/">Back</a></p>
 
 <?php get_footer(); ?>
