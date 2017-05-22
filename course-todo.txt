@@ -1,7 +1,5 @@
 # Todo
 
-HTTP verb
-
 Debugging/felsökning
 
 Felhantering/Exceptions
@@ -19,3 +17,6 @@ ORM / Active Record
 - Relationship
 
 MVC
+
+HTTP verb
+- Forms
