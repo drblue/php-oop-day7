@@ -6,9 +6,9 @@
 		<a class="navbar-brand" href="#">Spåtifaj</a>
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			<div class="navbar-nav">
-				<a class="nav-item nav-link" href="/day6/orm/">Home</a>
-				<a class="nav-item nav-link" href="/day6/orm/artists/">Artists</a>
-				<a class="nav-item nav-link" href="/day6/orm/albums/">Albums</a>
+				<a class="nav-item nav-link" href="/day7/orm/">Home</a>
+				<a class="nav-item nav-link" href="/day7/orm/artists/">Artists</a>
+				<a class="nav-item nav-link" href="/day7/orm/albums/">Albums</a>
 			</div>
 		</div>
 		</div><!-- /.container -->

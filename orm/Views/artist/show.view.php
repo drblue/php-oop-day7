@@ -14,6 +14,6 @@
 	</ol>
 <?php } ?>
 
-<p><a href="/day6/orm/artists/">Back</a></p>
+<p><a href="/day7/orm/artists/">Back</a></p>
 
 <?php get_footer(); ?>

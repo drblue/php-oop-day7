@@ -4,7 +4,7 @@ require "bootstrap.php";
 
 $app_name = "Spotify";
 
-$route_prefix = "/day6/orm";
+$route_prefix = "/day7/orm";
 $routes = [
 	'/' => 'App\Controllers\WelcomeController',
 	'/artists/' => 'App\Controllers\ArtistController',
@@ -12,9 +12,8 @@ $routes = [
 	'/movies/' => 'App\Controllers\MovieController',
 ];
 
-// $page = (isset($_REQUEST['page'])) ? $_REQUEST['page'] : "";
-
-$page = str_replace($route_prefix, "", $_SERVER['REDIRECT_URL']);
+$page = (isset($_SERVER['REDIRECT_URL'])) ? $_SERVER['REDIRECT_URL'] : "/";
+$page = str_replace($route_prefix, "", $page);
 
 if (array_key_exists($page, $routes)) {
 	// ladda sida

@@ -1,3 +1,16 @@
+# Todo
+
+HTTP verb
+
+Debugging/felsökning
+
+Felhantering/Exceptions
+
+static + final
+
+
+# Done
+
 Composer
 - Autoloader
 - Namespaces
@@ -6,8 +19,3 @@ ORM / Active Record
 - Relationship
 
 MVC
-Debugging/felsökning
-Felhantering/Exceptions
-
-static
-final

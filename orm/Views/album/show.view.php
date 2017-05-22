@@ -4,6 +4,6 @@
 
 <p>Release Year: <?php echo $album->releaseYear; ?></p>
 
-<p><a href="/day6/orm/albums/">Back</a></p>
+<p><a href="/day7/orm/albums/">Back</a></p>
 
 <?php get_footer(); ?>

@@ -4,7 +4,7 @@
 
 <ul>
 	<?php foreach ($albums as $album) { ?>
-		<li><a href="/day6/orm/albums/?id=<?php echo $album->id; ?>"><?php echo $album->name; ?></a></li>
+		<li><a href="/day7/orm/albums/?id=<?php echo $album->id; ?>"><?php echo $album->name; ?></a></li>
 	<?php } ?>
 </ul>
 
